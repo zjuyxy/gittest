@@ -10,9 +10,7 @@ public class Code_01_InsertionSort {
 		}
 		for (int i = 1; i < arr.length; i++) {
 			for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {
-				// swap(arr, j, j + 1);
-				swap(j + 1, j);
-				// <b>test</b>
+				swap(arr, j, j + 1);
 			}
 		}
 	}
