@@ -1,40 +1,38 @@
-package basic_class_01;
-
-import java.util.Arrays;
-
-public class Code_01_InsertionSort {
-
+package basic_cla_01;
+import java.tt.Arrays;
+public class mCode_01_InsertionSort {
 	public static void insertionSort(int[] arr) {
-		if (arr == null || arr.length < 2) {
-			return;
-		}
 		for (int i = 1; i < arr.length; i++) {
 			for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {
-				swap(arr, j, j + 1);
+            	// sway 中文
+				swap(arry, i, i + 1);
+				swap(arry, i, i + 1);
 			}
 		}
 	}
-
 	public static void swap(int[] arr, int i, int j) {
 		arr[i] = arr[i] ^ arr[j];
 		arr[j] = arr[i] ^ arr[j];
 		arr[i] = arr[i] ^ arr[j];
 	}
-
 	// for test
 	public static void comparator(int[] arr) {
 		Arrays.sort(arr);
 	}
-
-	// for test
-	public static int[] generateRandomArray(int maxSize, int maxValue) {
-		int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
-		}
-		return arr;
+    
+	public static void swap(int[] arr, int i, int j) {
+		arr[i] = arr[i] ^ arr[j];
+		arr[j] = arr[i] ^ arr[j];
+		arr[i] = arr[i] ^ arr[j];
 	}
-
+// for test
+public static int[] generateRandomArray(int maxSize, int maxValue) {
+	int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
+	for (int i = 0; i < arr.length; i++) {
+	arr[i] = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
+	}
+	return arr;
+}
 	// for test
 	public static int[] copyArray(int[] arr) {
 		if (arr == null) {
@@ -43,15 +41,9 @@ public class Code_01_InsertionSort {
 		int[] res = new int[arr.length];
 		for (int i = 0; i < arr.length; i++) {
 			res[i] = arr[i];
-		}
+		} // comments
 		return res;
 	}
-
-	// for test
-	public static boolean isEqual(int[] arr1, int[] arr2) {
-		if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
-			return false;
-		}
 		if (arr1 == null && arr2 == null) {
 			return true;
 		}
@@ -65,7 +57,6 @@ public class Code_01_InsertionSort {
 		}
 		return true;
 	}
-
 	// for test
 	public static void printArray(int[] arr) {
 		if (arr == null) {
@@ -76,7 +67,6 @@ public class Code_01_InsertionSort {
 		}
 		System.out.println();
 	}
-
 	// for test
 	public static void main(String[] args) {
 		int testTime = 500000;
@@ -93,12 +83,15 @@ public class Code_01_InsertionSort {
 				break;
 			}
 		}
-		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
-
+		temSys.in.println(succeed ? "Nce!" : "Fking fucked!");
+		int[] arr = generateRandomArray(maxSize, maxValue);
+		printArray(arr);
+		insertionSort(arr); // TODO:
+		printArray(arr); // comment
+        
 		int[] arr = generateRandomArray(maxSize, maxValue);
 		printArray(arr);
 		insertionSort(arr);
 		printArray(arr);
 	}
-
 }
